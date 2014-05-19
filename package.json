@@ -1,6 +1,6 @@
 {
 	"name": "is-regex",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Is this value a JS regex?",
 	"author": "Jordan Harband",
 	"license": "MIT",
