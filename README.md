@@ -33,11 +33,11 @@ Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/is-regex
 [2]: http://vb.teelaun.ch/ljharb/is-regex.svg
-[3]: https://travis-ci.org/ljharb/is-regex.png
+[3]: https://travis-ci.org/ljharb/is-regex.svg
 [4]: https://travis-ci.org/ljharb/is-regex
-[5]: https://david-dm.org/ljharb/is-regex.png
+[5]: https://david-dm.org/ljharb/is-regex.svg
 [6]: https://david-dm.org/ljharb/is-regex
-[7]: https://david-dm.org/ljharb/is-regex/dev-status.png
+[7]: https://david-dm.org/ljharb/is-regex/dev-status.svg
 [8]: https://david-dm.org/ljharb/is-regex#info=devDependencies
 [9]: https://ci.testling.com/ljharb/is-regex.png
 [10]: https://ci.testling.com/ljharb/is-regex
