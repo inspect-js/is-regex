@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var _toString = Object.prototype.toString;
 var regexType = '[object RegExp]';
