@@ -1,9 +1,13 @@
 'use strict';
 
-var _toString = Object.prototype.toString;
-var regexType = '[object RegExp]';
+var regexExec = RegExp.prototype.exec;
 
 module.exports = function isRegex(value) {
-	return _toString.call(value) === regexType;
+	try {
+		regexExec.call(value);
+		return true;
+	} catch (e) {
+		return false;
+	}
 };
 
