@@ -1,7 +1,7 @@
 {
 	"name": "is-regex",
-	"version": "1.0.0",
-	"description": "Is this value a JS regex?",
+	"version": "1.0.1",
+	"description": "Is this value a JS regex? Works cross-realm/iframe, and despite ES6 @@toStringTag",
 	"author": "Jordan Harband",
 	"license": "MIT",
 	"main": "index.js",

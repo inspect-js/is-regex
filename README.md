@@ -11,6 +11,7 @@
 [![browser support][9]][10]
 
 Is this value a JS regex?
+This module works cross-realm/iframe, and despite ES6 @@toStringTag.
 
 ## Example
 
