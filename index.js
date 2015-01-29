@@ -2,7 +2,7 @@
 
 var regexExec = RegExp.prototype.exec;
 
-module.exports = function isRegex(value) {
+var tryRegexExec = function tryRegexExec(value) {
 	try {
 		regexExec.call(value);
 		return true;
@@ -11,3 +11,7 @@ module.exports = function isRegex(value) {
 	}
 };
 
+module.exports = function isRegex(value) {
+	if (typeof value !== 'object') { return false; }
+	return tryRegexExec(value);
+};
