@@ -1,3 +1,7 @@
+1.0.3 / 2015-01-29
+=================
+  * If @@toStringTag is not present, use the old-school Object#toString test.
+
 1.0.2 / 2015-01-29
 =================
   * Improve optimization by separating the try/catch, and bailing out early when not typeof "object".
