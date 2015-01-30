@@ -2,6 +2,7 @@
 
 var test = require('tape');
 var isRegex = require('./');
+var hasToStringTag = typeof Symbol === 'function' && typeof Symbol.toStringTag === 'symbol';
 
 test('not regexes', function (t) {
 	t.notOk(isRegex(), 'undefined is not regex');
@@ -16,9 +17,16 @@ test('not regexes', function (t) {
 	t.end();
 });
 
+test('@@toStringTag', { skip: !hasToStringTag }, function (t) {
+	var regex = /a/g;
+	var fakeRegex = { valueOf: function () { return regex; }, toString: function () { return String(regex); } };
+	fakeRegex[Symbol.toStringTag] = function () { return 'RegExp'; };
+	t.notOk(isRegex(fakeRegex), 'fake RegExp with @@toStringTag "RegExp" is not regex');
+	t.end();
+});
+
 test('regexes', function (t) {
 	t.ok(isRegex(/a/g), 'regex literal is regex');
 	t.ok(isRegex(new RegExp('a', 'g')), 'regex object is regex');
 	t.end();
 });
-
