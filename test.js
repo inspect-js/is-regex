@@ -20,7 +20,7 @@ test('not regexes', function (t) {
 test('@@toStringTag', { skip: !hasToStringTag }, function (t) {
 	var regex = /a/g;
 	var fakeRegex = { valueOf: function () { return regex; }, toString: function () { return String(regex); } };
-	fakeRegex[Symbol.toStringTag] = function () { return 'RegExp'; };
+	fakeRegex[Symbol.toStringTag] = 'RegExp';
 	t.notOk(isRegex(fakeRegex), 'fake RegExp with @@toStringTag "RegExp" is not regex');
 	t.end();
 });
