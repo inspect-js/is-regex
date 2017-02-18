@@ -6,10 +6,15 @@ var gOPD = Object.getOwnPropertyDescriptor;
 
 var tryRegexExecCall = function tryRegexExec(value) {
 	try {
+		var lastIndex = value.lastIndex;
+		value.lastIndex = 0;
+
 		regexExec.call(value);
 		return true;
 	} catch (e) {
 		return false;
+	} finally {
+		value.lastIndex = lastIndex;
 	}
 };
 var toStr = Object.prototype.toString;

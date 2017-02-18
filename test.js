@@ -33,3 +33,26 @@ test('regexes', function (t) {
 	t.ok(isRegex(new RegExp('a', 'g')), 'regex object is regex');
 	t.end();
 });
+
+test('does not mutate regexes', function (t) {
+	t.test('lastIndex is a marker object', function (st) {
+		var regex = /a/;
+		var marker = {};
+		regex.lastIndex = marker;
+		st.equal(regex.lastIndex, marker, 'lastIndex is the marker object');
+		st.ok(isRegex(regex), 'is regex');
+		st.equal(regex.lastIndex, marker, 'lastIndex is the marker object after isRegex');
+		st.end();
+	});
+
+	t.test('lastIndex is nonzero', function (st) {
+		var regex = /a/;
+		regex.lastIndex = 3;
+		st.equal(regex.lastIndex, 3, 'lastIndex is 3');
+		st.ok(isRegex(regex), 'is regex');
+		st.equal(regex.lastIndex, 3, 'lastIndex is 3 after isRegex');
+		st.end();
+	});
+
+	t.end();
+});
