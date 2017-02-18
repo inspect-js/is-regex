@@ -1,6 +1,9 @@
 'use strict';
 
+var has = require('has');
 var regexExec = RegExp.prototype.exec;
+var gOPD = Object.getOwnPropertyDescriptor;
+
 var tryRegexExecCall = function tryRegexExec(value) {
 	try {
 		regexExec.call(value);
@@ -19,6 +22,12 @@ module.exports = function isRegex(value) {
 	}
 	if (!hasToStringTag) {
 		return toStr.call(value) === regexClass;
+	}
+
+	var descriptor = gOPD(value, 'lastIndex');
+	var hasLastIndexDataProperty = descriptor && has(descriptor, 'value');
+	if (!hasLastIndexDataProperty) {
+		return false;
 	}
 
 	return tryRegexExecCall(value);
