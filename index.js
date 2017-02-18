@@ -17,5 +17,9 @@ module.exports = function isRegex(value) {
 	if (!value || typeof value !== 'object') {
 		return false;
 	}
-	return hasToStringTag ? tryRegexExecCall(value) : toStr.call(value) === regexClass;
+	if (!hasToStringTag) {
+		return toStr.call(value) === regexClass;
+	}
+
+	return tryRegexExecCall(value);
 };
