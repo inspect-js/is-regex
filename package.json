@@ -35,7 +35,7 @@
 		"expression"
 	],
 	"dependencies": {
-		"has": "^1.0.1"
+		"has": "^1.0.3"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^13.0.0",
