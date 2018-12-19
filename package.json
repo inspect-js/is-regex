@@ -12,9 +12,7 @@
 		"posttest": "npm run security",
 		"coverage": "covert test.js",
 		"coverage-quiet": "covert test.js --quiet",
-		"lint": "npm run jscs && npm run eslint",
-		"jscs": "jscs *.js",
-		"eslint": "eslint test.js *.js",
+		"lint": "eslint test.js *.js",
 		"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
 		"security": "nsp check"
 	},
@@ -42,7 +40,6 @@
 		"covert": "^1.1.0",
 		"editorconfig-tools": "^0.1.1",
 		"eslint": "^4.19.1",
-		"jscs": "^3.0.7",
 		"nsp": "^3.2.1",
 		"replace": "^1.0.0",
 		"semver": "^5.5.0",
