@@ -38,14 +38,14 @@
 		"has": "^1.0.3"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^13.0.0",
-		"covert": "^1.1.0",
+		"@ljharb/eslint-config": "^13.1.1",
+		"covert": "^1.1.1",
 		"editorconfig-tools": "^0.1.1",
-		"eslint": "^5.10.0",
+		"eslint": "^5.13.0",
 		"nsp": "^3.2.1",
 		"replace": "^1.0.1",
 		"semver": "^5.6.0",
-		"tape": "^4.9.1"
+		"tape": "^4.10.0"
 	},
 	"testling": {
 		"files": "test.js",
