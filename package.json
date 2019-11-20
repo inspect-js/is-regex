@@ -11,11 +11,10 @@
 	"scripts": {
 		"pretest": "npm run lint",
 		"test": "npm run tests-only",
-		"tests-only": "node --harmony --es-staging test.js",
+		"tests-only": "node --harmony --es-staging test",
 		"posttest": "npx aud",
-		"coverage": "covert test.js",
-		"coverage-quiet": "covert test.js --quiet",
-		"lint": "eslint test.js *.js",
+		"coverage": "covert test/index.js",
+		"lint": "eslint .",
 		"eccheck": "eclint check *.js **/*.js > /dev/null",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
@@ -40,11 +39,11 @@
 		"has": "^1.0.3"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^14.1.0",
+		"@ljharb/eslint-config": "^15.0.2",
 		"auto-changelog": "^1.16.2",
 		"covert": "^1.1.1",
 		"eclint": "^2.8.1",
-		"eslint": "^6.4.0",
+		"eslint": "^6.6.0",
 		"replace": "^1.1.1",
 		"semver": "^6.3.0",
 		"tape": "^4.11.0"

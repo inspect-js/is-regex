@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var isRegex = require('./');
+var isRegex = require('..');
 var hasToStringTag = typeof Symbol === 'function' && typeof Symbol.toStringTag === 'symbol';
 
 test('not regexes', function (t) {
