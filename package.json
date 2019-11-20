@@ -2,7 +2,10 @@
 	"name": "is-regex",
 	"version": "1.0.4",
 	"description": "Is this value a JS regex? Works cross-realm/iframe, and despite ES6 @@toStringTag",
-	"author": "Jordan Harband",
+	"author": "Jordan Harband <ljharb@gmail.com>",
+	"funding": {
+		"url": "https://github.com/sponsors/ljharb"
+	},
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
