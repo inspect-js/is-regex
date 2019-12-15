@@ -44,8 +44,6 @@
 		"covert": "^1.1.1",
 		"eclint": "^2.8.1",
 		"eslint": "^6.6.0",
-		"replace": "^1.1.1",
-		"semver": "^6.3.0",
 		"tape": "^4.11.0"
 	},
 	"testling": {
