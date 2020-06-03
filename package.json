@@ -40,14 +40,14 @@
 		"has": "^1.0.3"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^16.0.0",
-		"aud": "^1.1.0",
+		"@ljharb/eslint-config": "^17.1.0",
+		"aud": "^1.1.2",
 		"auto-changelog": "^2.0.0",
 		"covert": "^1.1.1",
 		"eclint": "^2.8.1",
-		"eslint": "^6.8.0",
+		"eslint": "^7.1.0",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.0.0-next.5"
+		"tape": "^5.0.1"
 	},
 	"testling": {
 		"files": "test.js",
