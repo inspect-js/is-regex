@@ -13,7 +13,7 @@
 		"pretest": "npm run lint",
 		"test": "npm run tests-only",
 		"tests-only": "node --harmony --es-staging test",
-		"posttest": "npx aud",
+		"posttest": "npx aud --production",
 		"coverage": "covert test/index.js",
 		"lint": "eslint .",
 		"eccheck": "eclint check *.js **/*.js > /dev/null",
