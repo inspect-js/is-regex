@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.1](https://github.com/inspect-js/is-regex/compare/v1.1.0...v1.1.1) - 2020-08-03
+
+### Commits
+
+- [Performance] Re-add lastIndex check to improve performance [`d8495cd`](https://github.com/inspect-js/is-regex/commit/d8495cd22d475ddca250818921b6088f631c1972)
+- [Dev Deps] update `auto-changelog`, `eslint` [`778fa6b`](https://github.com/inspect-js/is-regex/commit/778fa6b9d2b182ee6d73993e103532855e956f85)
+
 ## [v1.1.0](https://github.com/inspect-js/is-regex/compare/v1.0.5...v1.1.0) - 2020-06-03
 
 ### Commits
