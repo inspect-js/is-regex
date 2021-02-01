@@ -37,6 +37,7 @@
 		"expression"
 	],
 	"dependencies": {
+		"call-bind": "^1.0.2",
 		"has-symbols": "^1.0.1"
 	},
 	"devDependencies": {
