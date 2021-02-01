@@ -22,12 +22,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/ljharb/is-regex.git"
+		"url": "git://github.com/inspect-js/is-regex.git"
 	},
 	"bugs": {
-		"url": "https://github.com/ljharb/is-regex/issues"
+		"url": "https://github.com/inspect-js/is-regex/issues"
 	},
-	"homepage": "https://github.com/ljharb/is-regex",
+	"homepage": "https://github.com/inspect-js/is-regex",
 	"keywords": [
 		"regex",
 		"regexp",
