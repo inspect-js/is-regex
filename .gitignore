@@ -20,3 +20,6 @@ node_modules
 yarn.lock
 npm-shrinkwrap.json
 package-lock.json
+
+coverage/
+.nyc_output/
