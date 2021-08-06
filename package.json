@@ -40,7 +40,7 @@
 	],
 	"dependencies": {
 		"call-bind": "^1.0.2",
-		"has-symbols": "^1.0.2"
+		"has-tostringtag": "^1.0.0"
 	},
 	"devDependencies": {
 		"@ljharb/eslint-config": "^17.6.0",
