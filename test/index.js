@@ -1,7 +1,7 @@
 'use strict';
 
 var hasToStringTag = require('has-tostringtag/shams')();
-var forEach = require('foreach');
+var forEach = require('for-each');
 var test = require('tape');
 var isRegex = require('..');
 
