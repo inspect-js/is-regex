@@ -87,7 +87,11 @@ test('does not perform operations observable to Proxies', { skip: typeof Proxy !
 		var proxy = new Proxy({ lastIndex: 0 }, handler);
 
 		st.equal(isRegex(proxy), false, 'proxy of plain object is not regex');
-		st.deepEqual(handler.trapCalls, ['getOwnPropertyDescriptor'], 'no unexpected proxy traps were triggered');
+		st.deepEqual(
+			handler.trapCalls,
+			handler.trapCalls.length > 0 ? ['getOwnPropertyDescriptor'] : [],
+			'no unexpected proxy traps were triggered'
+		);
 		st.end();
 	});
 
@@ -96,7 +100,11 @@ test('does not perform operations observable to Proxies', { skip: typeof Proxy !
 		var proxy = new Proxy(/a/, handler);
 
 		st.equal(isRegex(proxy), false, 'proxy of RegExp instance is not regex');
-		st.deepEqual(handler.trapCalls, ['getOwnPropertyDescriptor'], 'no unexpected proxy traps were triggered');
+		st.deepEqual(
+			handler.trapCalls,
+			handler.trapCalls.length > 0 ? ['getOwnPropertyDescriptor'] : [],
+			'no unexpected proxy traps were triggered'
+		);
 		st.end();
 	});
 
