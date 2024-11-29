@@ -41,6 +41,7 @@
 	],
 	"dependencies": {
 		"call-bind": "^1.0.7",
+		"gopd": "^1.0.1",
 		"has-tostringtag": "^1.0.2",
 		"hasown": "^2.0.2"
 	},

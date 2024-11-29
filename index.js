@@ -3,18 +3,17 @@
 var callBound = require('call-bind/callBound');
 var hasToStringTag = require('has-tostringtag/shams')();
 var hasOwn = require('hasown');
-var $exec;
-var isRegexMarker;
-var badStringifier;
+var gOPD = require('gopd');
 
+var fn;
 if (hasToStringTag) {
-	$exec = callBound('RegExp.prototype.exec');
-	isRegexMarker = {};
+	var $exec = callBound('RegExp.prototype.exec');
+	var isRegexMarker = {};
 
 	var throwRegexMarker = function () {
 		throw isRegexMarker;
 	};
-	badStringifier = {
+	var badStringifier = {
 		toString: throwRegexMarker,
 		valueOf: throwRegexMarker
 	};
@@ -22,15 +21,9 @@ if (hasToStringTag) {
 	if (typeof Symbol.toPrimitive === 'symbol') {
 		badStringifier[Symbol.toPrimitive] = throwRegexMarker;
 	}
-}
 
-var $toString = callBound('Object.prototype.toString');
-var gOPD = Object.getOwnPropertyDescriptor;
-var regexClass = '[object RegExp]';
-
-module.exports = hasToStringTag
 	// eslint-disable-next-line consistent-return
-	? function isRegex(value) {
+	fn = function isRegex(value) {
 		if (!value || typeof value !== 'object') {
 			return false;
 		}
@@ -46,8 +39,12 @@ module.exports = hasToStringTag
 		} catch (e) {
 			return e === isRegexMarker;
 		}
-	}
-	: function isRegex(value) {
+	};
+} else {
+	var $toString = callBound('Object.prototype.toString');
+	var regexClass = '[object RegExp]';
+
+	fn = function isRegex(value) {
 		// In older browsers, typeof regex incorrectly returns 'function'
 		if (!value || (typeof value !== 'object' && typeof value !== 'function')) {
 			return false;
@@ -55,3 +52,6 @@ module.exports = hasToStringTag
 
 		return $toString(value) === regexClass;
 	};
+}
+
+module.exports = fn;
