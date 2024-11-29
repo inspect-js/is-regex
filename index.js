@@ -2,13 +2,12 @@
 
 var callBound = require('call-bind/callBound');
 var hasToStringTag = require('has-tostringtag/shams')();
-var has;
+var hasOwn = require('hasown');
 var $exec;
 var isRegexMarker;
 var badStringifier;
 
 if (hasToStringTag) {
-	has = callBound('Object.prototype.hasOwnProperty');
 	$exec = callBound('RegExp.prototype.exec');
 	isRegexMarker = {};
 
@@ -37,7 +36,7 @@ module.exports = hasToStringTag
 		}
 
 		var descriptor = gOPD(value, 'lastIndex');
-		var hasLastIndexDataProperty = descriptor && has(descriptor, 'value');
+		var hasLastIndexDataProperty = descriptor && hasOwn(descriptor, 'value');
 		if (!hasLastIndexDataProperty) {
 			return false;
 		}
