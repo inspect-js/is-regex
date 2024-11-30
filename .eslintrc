@@ -4,6 +4,7 @@
 	"extends": "@ljharb",
 
 	"rules": {
+		"func-style": 0,
 		"id-length": [1],
 	},
 }

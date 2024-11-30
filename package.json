@@ -20,6 +20,7 @@
 		"posttest": "npx npm@'>=10.2' audit --production",
 		"prelint": "eclint check $(git ls-files | xargs find 2> /dev/null | grep -vE 'node_modules|\\.git')",
 		"lint": "eslint --ext=js,mjs .",
+		"postlint": "tsc -p . && attw -P",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
@@ -46,7 +47,13 @@
 		"hasown": "^2.0.2"
 	},
 	"devDependencies": {
+		"@arethetypeswrong/cli": "^0.17.0",
 		"@ljharb/eslint-config": "^21.1.1",
+		"@ljharb/tsconfig": "^0.2.0",
+		"@types/call-bind": "^1.0.5",
+		"@types/core-js": "^2.5.8",
+		"@types/for-each": "^0.3.3",
+		"@types/tape": "^5.6.5",
 		"auto-changelog": "^2.5.0",
 		"core-js": "^3.39.0",
 		"eclint": "^2.8.1",
@@ -57,7 +64,8 @@
 		"npmignore": "^0.3.1",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^2.0.0",
-		"tape": "^5.9.0"
+		"tape": "^5.9.0",
+		"typescript": "^5.8.0-dev.20241129"
 	},
 	"testling": {
 		"files": "test/index.js",
