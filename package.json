@@ -48,7 +48,7 @@
 	"devDependencies": {
 		"@ljharb/eslint-config": "^21.1.1",
 		"auto-changelog": "^2.5.0",
-		"core-js": "^3.38.1",
+		"core-js": "^3.39.0",
 		"eclint": "^2.8.1",
 		"encoding": "^0.1.13",
 		"eslint": "=8.8.0",
