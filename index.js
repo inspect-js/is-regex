@@ -1,6 +1,6 @@
 'use strict';
 
-var callBound = require('call-bind/callBound');
+var callBound = require('call-bound');
 var hasToStringTag = require('has-tostringtag/shams')();
 var hasOwn = require('hasown');
 var gOPD = require('gopd');
