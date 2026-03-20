@@ -9,7 +9,6 @@ var gOPD = require('gopd');
 var fn;
 
 if (hasToStringTag) {
-	/** @type {(receiver: ThisParameterType<typeof RegExp.prototype.exec>, ...args: Parameters<typeof RegExp.prototype.exec>) => ReturnType<typeof RegExp.prototype.exec>} */
 	var $exec = callBound('RegExp.prototype.exec');
 	/** @type {object} */
 	var isRegexMarker = {};
@@ -44,13 +43,12 @@ if (hasToStringTag) {
 
 		try {
 			// eslint-disable-next-line no-extra-parens
-			$exec(value, /** @type {string} */ (/** @type {unknown} */ (badStringifier)));
+			$exec(/** @type {RegExp} */ (value), /** @type {string} */ (/** @type {unknown} */ (badStringifier)));
 		} catch (e) {
 			return e === isRegexMarker;
 		}
 	};
 } else {
-	/** @type {(receiver: ThisParameterType<typeof Object.prototype.toString>, ...args: Parameters<typeof Object.prototype.toString>) => ReturnType<typeof Object.prototype.toString>} */
 	var $toString = callBound('Object.prototype.toString');
 	/** @const @type {'[object RegExp]'} */
 	var regexClass = '[object RegExp]';
