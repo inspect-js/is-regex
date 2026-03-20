@@ -41,7 +41,7 @@
 		"expression"
 	],
 	"dependencies": {
-		"call-bound": "^1.0.2",
+		"call-bound": "^1.0.4",
 		"gopd": "^1.2.0",
 		"has-tostringtag": "^1.0.2",
 		"hasown": "^2.0.2"
