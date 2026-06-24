@@ -26,7 +26,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/inspect-js/is-regex.git"
+		"url": "git+https://github.com/inspect-js/is-regex.git"
 	},
 	"bugs": {
 		"url": "https://github.com/inspect-js/is-regex/issues"
